@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>D.A.V.E. – Smart Repair, Dellenentfernung &amp; Fahrzeugaufbereitung | Mobil &amp; Stationär</title>
-<meta name="description" content="D.A.V.E. – Smart Repair mobil &amp; stationär: Dellenentfernung (PDR) ab 85 €, Lack- &amp; Glasversiegelung ab 120 €, Innenraumaufbereitung ab 85 €, Fahrzeugüberführung ab 145 €. Wir kommen zu dir! ☎ 0178 371 8860">
+<meta name="description" content="D.A.V.E. – Smart Repair mobil &amp; stationär: Dellenentfernung (PDR) ab 85 €, Lack- &amp; Glasversiegelung ab 120 €, Innenraumaufbereitung ab 85 €, Fahrzeugüberführung ab 145 € (alle Preise zzgl. MwSt.). Wir kommen zu dir! ☎ +49 178 371 8860">
 <meta name="theme-color" content="#0a0a0c">
 <link rel="canonical" href="https://ali1810.github.io/dave/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -32,12 +32,12 @@
   "telephone": "+49 178 3718860",
   "email": "donald.sewell@gmx.de",
   "priceRange": "ab 85 €",
-  "founder": { "@type": "Person", "name": "Donald Sewell" },
+  "founder": { "@type": "Person", "name": "Donald Craig Sewell" },
   "makesOffer": [
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "PDR / Dellen-Technik" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 85, "priceCurrency": "EUR" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fahrzeugtransport & Überführung" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 145, "priceCurrency": "EUR" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lack- & Glasversiegelung" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 120, "priceCurrency": "EUR" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Innenraumpflege & Aufbereitung" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 85, "priceCurrency": "EUR" } }
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "PDR / Dellen-Technik" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 85, "priceCurrency": "EUR", "valueAddedTaxIncluded": false } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fahrzeugtransport & Überführung" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 145, "priceCurrency": "EUR", "valueAddedTaxIncluded": false } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lack- & Glasversiegelung" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 120, "priceCurrency": "EUR", "valueAddedTaxIncluded": false } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Innenraumpflege & Aufbereitung" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 85, "priceCurrency": "EUR", "valueAddedTaxIncluded": false } }
   ]
 }
 </script>
@@ -114,7 +114,9 @@
   .hero::after{content:"";position:absolute;inset:0;z-index:-2;opacity:.25;
     background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:60px 60px;
     -webkit-mask-image:radial-gradient(ellipse at 60% 50%,#000 20%,transparent 70%);mask-image:radial-gradient(ellipse at 60% 50%,#000 20%,transparent 70%)}
-  .streaks{position:absolute;inset:0;z-index:-1;pointer-events:none}
+  .streaks{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+  html,body{overflow-x:hidden}
+  @supports (overflow:clip){html,body{overflow-x:clip}}
   .streaks span{position:absolute;left:0;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--red2),transparent);animation:streak 4s linear infinite;will-change:transform}
   @keyframes streak{from{transform:translateX(-60vw)}to{transform:translateX(120vw)}}
   .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;width:100%}
@@ -175,6 +177,8 @@
   .price{display:inline-flex;align-items:baseline;gap:8px;background:linear-gradient(180deg,#b10e22,#7e0817);border:1px solid var(--red2);padding:8px 16px;border-radius:9px;font-weight:800;text-transform:uppercase;font-style:italic}
   .price small{font-size:12px;letter-spacing:.06em}
   .price b{font-size:24px}
+  .price .vat{font-size:11px;font-style:normal;text-transform:none;letter-spacing:.02em;font-weight:600;opacity:.85}
+  .vat-note{text-align:center;color:var(--muted);font-size:14px;margin-top:28px}
   .ask{font-weight:700;font-size:14px;color:var(--gold);display:inline-flex;align-items:center;gap:6px;background:none;border:0;cursor:pointer;font-family:inherit;padding:6px 0}
   .ask svg{transition:transform .2s}.ask:hover svg{transform:translateX(4px)}
   @media (max-width:960px){.services{grid-template-columns:1fr}}
@@ -314,7 +318,7 @@
     </nav>
     <a href="tel:+491783718860" class="btn btn-red nav-cta">
       <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-      0178 371 8860
+      +49 178 371 8860
     </a>
     <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><span></span></button>
   </div>
@@ -377,7 +381,7 @@
             <circle cx="400" cy="202" r="6" fill="#f2a516"/>
           </g>
         </svg>
-        <div class="chip c1"><b>ab 85 €</b>Dellen-Technik</div>
+        <div class="chip c1"><b>ab 85 €</b>Dellen-Technik · zzgl. MwSt.</div>
         <div class="chip c2"><b>📍 Wir kommen zu dir</b>Mobil oder stationär</div>
       </div>
     </div>
@@ -411,7 +415,7 @@
             <p class="d">Ausbeulen ohne Lackieren – der Originallack bleibt erhalten. Ideal bei Parkdellen und Hagelschäden.</p>
             <ul><li>Kleine Dellen</li><li>Mittlere Dellen</li><li>Große Dellen</li></ul>
             <div class="foot">
-              <span class="price"><small>Preise ab</small><b>85 €</b></span>
+              <span class="price"><small>Preise ab</small><b>85 €</b><em class="vat">zzgl. MwSt.</em></span>
               <button class="ask" data-svc="PDR / Dellen-Technik">Anfragen <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
             </div>
           </div>
@@ -425,7 +429,7 @@
             <p class="d">Sicher von A nach B – zur Werkstatt, zum TÜV, zum Käufer oder quer durch Deutschland.</p>
             <ul><li>Kurzstrecke</li><li>Mittlere Strecke</li><li>Langstrecke</li></ul>
             <div class="foot">
-              <span class="price"><small>Preise ab</small><b>145 €</b></span>
+              <span class="price"><small>Preise ab</small><b>145 €</b><em class="vat">zzgl. MwSt.</em></span>
               <button class="ask" data-svc="Fahrzeugtransport &amp; Überführung">Anfragen <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
             </div>
           </div>
@@ -439,7 +443,7 @@
             <p class="d">Tiefenglanz und langanhaltender Schutz vor Schmutz, Salz und UV – vom Basis-Paket bis Keramik.</p>
             <ul><li>Basis</li><li>Premium</li><li>Keramik</li><li>Glas</li></ul>
             <div class="foot">
-              <span class="price"><small>Preise ab</small><b>120 €</b></span>
+              <span class="price"><small>Preise ab</small><b>120 €</b><em class="vat">zzgl. MwSt.</em></span>
               <button class="ask" data-svc="Lack- &amp; Glasversiegelung">Anfragen <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
             </div>
           </div>
@@ -453,12 +457,13 @@
             <p class="d">Polster, Teppiche, Cockpit und Leder – gründlich gereinigt und gepflegt, als wär's ein Neuwagen.</p>
             <ul><li>Basis</li><li>Intensiv</li><li>Komplettaufbereitung</li><li>Lederpflege</li></ul>
             <div class="foot">
-              <span class="price"><small>Preise ab</small><b>85 €</b></span>
+              <span class="price"><small>Preise ab</small><b>85 €</b><em class="vat">zzgl. MwSt.</em></span>
               <button class="ask" data-svc="Innenraumpflege &amp; Aufbereitung">Anfragen <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
             </div>
           </div>
         </article>
       </div>
+      <p class="vat-note rv">Alle Preise verstehen sich zzgl. der gesetzlichen MwSt. (19 %). Der genaue Preis richtet sich nach Aufwand und wird vorab verbindlich vereinbart.</p>
     </div>
   </section>
 
@@ -552,7 +557,7 @@
         <p class="rv d2">Ob Delle im Kotflügel, Versiegelung für den Winter oder Überführung quer durchs Land – du bekommst alles aus einer Hand.</p>
         <ul class="checks rv d3">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Mobil &amp; stationär – du entscheidest</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Transparente Preise ab 85 €</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Transparente Preise ab 85 € zzgl. MwSt.</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Hochwertige Produkte &amp; saubere Arbeit</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Flexible Termine – auch kurzfristig</li>
         </ul>
@@ -569,7 +574,7 @@
       </div>
       <div class="faq rv d1">
         <details><summary>Kommt ihr wirklich zu mir nach Hause?</summary><p>Ja! Viele Arbeiten wie Dellen-Technik, Innenraumpflege und Versiegelung erledigen wir mobil – bei dir zu Hause, im Büro oder auf dem Firmenparkplatz. Für manche Arbeiten ist ein stationärer Termin sinnvoller; das besprechen wir vorab.</p></details>
-        <details><summary>Was kostet die Reparatur meiner Delle?</summary><p>Die Preise starten ab 85 €. Der genaue Preis hängt von Größe, Tiefe und Position der Delle ab. Schick uns einfach ein Foto per WhatsApp oder E-Mail – dann bekommst du schnell ein Angebot.</p></details>
+        <details><summary>Was kostet die Reparatur meiner Delle?</summary><p>Die Preise starten ab 85 € zzgl. MwSt. Der genaue Preis hängt von Größe, Tiefe und Position der Delle ab. Schick uns einfach ein Foto per WhatsApp oder E-Mail – dann bekommst du schnell ein Angebot.</p></details>
         <details><summary>Muss nach der Dellenentfernung lackiert werden?</summary><p>Nein. Bei der PDR-Methode wird das Blech ohne Spachtel und ohne Lackieren zurückgeformt. Der Originallack bleibt erhalten – solange er nicht beschädigt ist.</p></details>
         <details><summary>Wie lange dauert eine Aufbereitung?</summary><p>Je nach Paket zwischen wenigen Stunden (Basis) und einem ganzen Tag (Komplettaufbereitung oder Keramikversiegelung). Die genaue Dauer nennen wir dir bei der Terminvereinbarung.</p></details>
         <details><summary>Überführt ihr auch über weite Strecken?</summary><p>Ja – von der Kurzstrecke in der Stadt bis zur Langstrecke durch ganz Deutschland. Sag uns Start, Ziel und Wunschtermin, und wir machen dir ein Angebot.</p></details>
@@ -589,7 +594,7 @@
         <div class="cbox rv">
           <a class="cline" href="tel:+491783718860">
             <span class="ci"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
-            <span><small>Telefon</small><strong>0178 371 8860</strong></span>
+            <span><small>Telefon</small><strong>+49 178 371 8860</strong></span>
           </a>
           <a class="cline" href="https://wa.me/491783718860" target="_blank" rel="noopener">
             <span class="ci" style="border-color:#1faa53;color:#25c463"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></span>
@@ -663,7 +668,7 @@
       <div>
         <h4>Kontakt</h4>
         <ul>
-          <li><a href="tel:+491783718860">0178 371 8860</a></li>
+          <li><a href="tel:+491783718860">+49 178 371 8860</a></li>
           <li><a href="mailto:donald.sewell@gmx.de">donald.sewell@gmx.de</a></li>
           <li><a href="https://wa.me/491783718860" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
